@@ -1353,7 +1353,7 @@ label{
     color: #383838;
 }
 .menu-style-2 nav > ul > li > a {
-    color: #383838;
+    color: #172de2;
     display: inline-block;
     font-size: 16px;
     font-weight: bold;
@@ -8607,7 +8607,7 @@ a.bundle-btn {
     z-index: 99999;
 }
 .furits-header .menu-style-2 nav > ul > li > a {
-    color: #578a01;
+    color: #172de2;
 }
 .furits-login-cart {
     display: flex;
@@ -8689,7 +8689,7 @@ a.bundle-btn {
     width: inherit;
 }
 .furits-slider-btn {
-    background-color: #85bd02;
+    background-color: #172de2;
     border-radius: 50px;
     color: #fffffe;
     display: inline-block;
@@ -8704,7 +8704,7 @@ a.bundle-btn {
     color: #fff;
 }
 .furits-content p {
-    color: #578a01;
+    color: #172de2;
     font-size: 24px;
     font-weight: 500;
     margin: 30px 0 52px;
@@ -9264,7 +9264,7 @@ a.bundle-btn {
     position: relative;
 }
 .blog-meta-2 ul li a {
-    color: #8f8f8f;
+    color: #172de2;
 }
 .blog-meta-2 ul li::before {
     background-color: #8f8f8f;
@@ -9279,7 +9279,7 @@ a.bundle-btn {
     content: none;
 }
 .blog-info-wrapper-2 > h3 {
-    color: #434343;
+    color: #172de2;
     font-size: 18px;
     font-weight: 500;
     letter-spacing: 0.5px;
