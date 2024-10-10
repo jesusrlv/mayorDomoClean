@@ -6,6 +6,11 @@
     
     $categoria = $_POST['categoria'];
     $descripcion = $_POST['descripcion'];
+    $precio = $_POST['precio'];
+    $precauciones = $_POST['precauciones'];
+    $modo_uso = $_POST['modo_uso'];
+    $nombre = $_POST['nombre'];
+
 
 $fileName = $_FILES["file"]["name"]; // The file name
 $fileTmpLoc = $_FILES["file"]["tmp_name"]; // File in the PHP tmp folder
@@ -26,8 +31,23 @@ $namePhoto = uniqid('photoMayorDome_', true) . '.' . $extension;
     echo "$fileName carga completa";
     
     $ruta = $namePhoto;
-    $sqlInsert= "INSERT INTO photo(ruta,categoria,descripcion) 
-    VALUES('$namePhoto','$categoria','$descripcion')";
+    $sqlInsert= "INSERT INTO photo(
+    ruta,
+    categoria,
+    descripcion,
+    precio,
+    precauciones,
+    modo_uso,
+    producto) 
+    VALUES(
+    '$namePhoto',
+    '$categoria',
+    '$descripcion',
+    '$precio',
+    '$precauciones',
+    '$modo_uso',
+    '$nombre')";
+
     $resultado= $conn->query($sqlInsert);
     
     

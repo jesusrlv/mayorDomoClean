@@ -19,11 +19,19 @@ function _(el) {
     var file = _("file").files[0];
     var categoria = document.getElementById("selectorCategoria").value;
     var descripcion = document.getElementById("descripcion").value;
+    var precio = document.getElementById("precio").value;
+    var precauciones = document.getElementById("precauciones").value;
+    var modo_uso = document.getElementById("modo_uso").value;
+    var nombre = document.getElementById("nombre").value;
     // alert(file.name+" | "+file.size+" | "+file.type);
     var formdata = new FormData();
     // variable del name file
+    formdata.append("nombre", nombre);
     formdata.append("categoria", categoria);
     formdata.append("descripcion", descripcion);
+    formdata.append("precio", precio);
+    formdata.append("precauciones", precauciones);
+    formdata.append("modo_uso", modo_uso);
     formdata.append("file", file);
     // variables post
     var ajax = new XMLHttpRequest();

@@ -62,28 +62,62 @@
         <form id="upload_form" enctype="multipart/form-data" method="post">
 
           <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Nombre del producto</span>
+            <input type="text" class="form-control" placeholder="Nombre del producto" aria-label="Nombre del producto" aria-describedby="basic-addon1" id="nombre">
+          </div>
+
+          <div class="input-group mb-3">
             <span class="input-group-text" id="basic-addon1">Descripción de la foto</span>
             <input type="text" class="form-control" placeholder="Texto para Descripción" aria-label="Texto para Descripción" aria-describedby="basic-addon1" id="descripcion">
           </div>          
 
-          <div class="input-group mb-3">
-            <span class="input-group-text" id="basic-addon2">Categoría de la foto</span>
-            <select class="form-select" name="" id="selectorCategoria">
-              <option value="">Seleccione categoría</option>
-              <option value="1">Doméstico</option>
-              <option value="2">Automotriz</option>
-              <option value="3">Mascotas</option>
-              <option value="4">Higiénicos</option>
-              <option value="5">Jarcería</option>
-              <option value="6">Escobas y trapeadores</option>
-            </select>
+          <div class="row">
+            <div class="col-6">
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon2">Categoría de la foto</span>
+                <select class="form-select" name="" id="selectorCategoria">
+                  <option value="">Seleccione categoría</option>
+                  <option value="1">Doméstico</option>
+                  <option value="2">Automotriz</option>
+                  <option value="3">Mascotas</option>
+                  <option value="4">Higiénicos</option>
+                  <option value="5">Jarcería</option>
+                  <option value="6">Escobas y trapeadores</option>
+                </select>
+              </div>
+
+            </div>
+            <div class="col-6">
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">Precio</span>
+                <input type="text" class="form-control" placeholder="Precio" aria-label="Precio" aria-describedby="basic-addon1" id="precio">
+              </div>    
+
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-6">
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">Precauciones</span>
+                <input type="text" class="form-control" placeholder="Precauciones" aria-label="Precauciones" aria-describedby="basic-addon1" id="precauciones">
+              </div>   
+
+            </div>
+            <div class="col-6">
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">Modo de uso</span>
+                <input type="text" class="form-control" placeholder="Modo de uso" aria-label="Modo de uso" aria-describedby="basic-addon1" id="modo_uso">
+              </div>    
+
+            </div>
           </div>
           
           <div class="input-group mb-3">
             <input type="file" id="file" class="form-control" placeholder="Imagen" aria-label="Imagen" aria-describedby="basic-addon1" accept="image/*">
             <span class="input-group-text" id="basic-addon1"><i class="bi bi-image-fill"></i></span>
-            
           </div>
+
           <progress id="progressBar" value="0" max="100" style="width:300px;"></progress>
           <small id="status"></small>
           <p id="loaded_n_total"></p>
