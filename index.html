@@ -439,18 +439,21 @@
 
 <!-- Modal para imágenes -->
 <div class="modal fade" id="modalPhotos" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-xl">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Catálogo</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          ...
+            <div class="row">
+                <div class="col-lg-4 col-md-3 col-sm-6" id="photosC">
+                   
+                </div>
+            </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
         </div>
       </div>
     </div>
@@ -459,7 +462,19 @@
 <script>
     function modalFotos(id){
     var idPhoto = id;
-    $("modalPhotos").modal("show");
+    $("#modalPhotos").modal("show");
+    $.ajax({
+        type: "POST",
+        data: {
+            idPhoto: idPhoto
+        },
+        url: "admin2/prcd/queryCatalogo.php",
+        dataType: "html",
+        success: function(data){
+            $('#photosC').fadeIn(1000).html(data);
+        }
+    });
+
   }
 </script>
 
