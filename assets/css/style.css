@@ -2372,7 +2372,7 @@ a.banner-book-style-btn:hover {
     padding-bottom: 0px;
 }
 .category-menu-list > ul > li > a {
-    color: #666666;
+    color: #ffffff;
     font-weight: bold;
     font-size: 14px;
 }
@@ -2961,7 +2961,8 @@ a.banner-book-style-btn:hover {
     color: #fff;
 }
 .btn-hover::before {
-    background: #000 none repeat scroll 0 0;
+    background: #172de2 none repeat scroll 0 0;
+    color: #dddddd;
     bottom: 0;
     content: "";
     left: 0;
@@ -6404,7 +6405,7 @@ a.icon-cart-furniture.food-cart span {
 }
 
 .btn-hover-black::before {
-    background: #333 none repeat scroll 0 0;
+    background: #fff none repeat scroll 0 0;
     bottom: 0;
     content: "";
     left: 0;
@@ -8607,7 +8608,7 @@ a.bundle-btn {
     z-index: 99999;
 }
 .furits-header .menu-style-2 nav > ul > li > a {
-    color: #172de2;
+    color: #ffffff ;
 }
 .furits-login-cart {
     display: flex;
@@ -8662,6 +8663,7 @@ a.bundle-btn {
     padding: 59px 100px 175px;
     position: absolute;
     z-index: 99;
+    visibility:hidden;
 }
 .slider-social li {
     display: inline-block;
@@ -8683,6 +8685,7 @@ a.bundle-btn {
     font-weight: bold;
     margin-right: 11px;
     text-transform: uppercase;
+    visibility:hidden;
 }
 .owl-carousel .owl-item .furits-content img {
     display: inline-block;
@@ -8833,7 +8836,7 @@ a.bundle-btn {
     transition: all 0.4s ease 0s;
 }
 .product-furit-action a {
-    background-color: #85bd02;
+    background-color: #428bca;
     border-radius: 0 50px 50px 0;
     color: #fff;
     font-size: 24px;
@@ -8865,7 +8868,7 @@ a.bundle-btn {
     color: #85bd02;
 }
 .product-fruit-content > span {
-    color: #85bd02;
+    color: #00177d;
     font-size: 18px;
 }
 .product-fruit-content {
