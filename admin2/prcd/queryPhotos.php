@@ -16,7 +16,7 @@ while ($row = $resultadoSql->fetch_assoc()) {
         </td>     
         <td>
 
-            <select class="form-select" aria-label="Default select example">
+            <select class="form-select" aria-label="Default select example" onchange="cambiarCategoria('.$row['id'].',this.value)">
                 <option value="0" '.(($row['categoria'] == 0) ? 'selected' : '').'>Selecciona la categoría</option>
                 <option value="1" '.(($row['categoria'] == 1) ? 'selected' : '').'>Categoría 1</option>
                 <option value="2" '.(($row['categoria'] == 2) ? 'selected' : '').'>Categoría 2</option>

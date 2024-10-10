@@ -41,6 +41,7 @@ function _(el) {
 
     function progressHandler(event) {
       queryPhotos();
+      alert("Se ha cargado correctamente");
         _("loaded_n_total").innerHTML = "Cargado " + event.loaded + " bytes de " + event.total;
         var percent = (event.loaded / event.total) * 100;
         _("progressBar").value = Math.round(percent);
@@ -52,6 +53,8 @@ function _(el) {
         _("progressBar").value = 0; //wil clear progress bar after successful upload
           _("file").style.display='none';
           _("progressBar").style.display='none';
+          document.getElementById("btnNew").disabled = false;
+          document.getElementById("btnAdd").disabled = true;
       }
       
       function errorHandler(event) {
@@ -128,4 +131,35 @@ var qrcode = new QRCode(document.getElementById("qrcode"+num), {
     else{
       console.log("No se eliminó");
     }
+  }
+
+  function cambiarCategoria(idPhoto,valor){
+    var idPhoto = idPhoto;
+    var categoria = valor;
+
+    $.ajax({
+      type: "POST",
+      data:{
+        idPhoto:idPhoto,
+        categoria:categoria
+      },
+      url: "prcd/cambiarCategoria.php",
+      dataType: "json",
+      success: function(data){
+        var jsonData = JSON.parse(JSON.stringify(data));
+        var success = jsonData.success;
+        if (success == 1){
+          alert("Se cambió la categoría");
+          queryPhotos();
+        }
+        else{
+          alert("No se cambió la categoría");
+        }
+      }
+    });
+
+  }
+
+  function reloadWeb(){
+    location.reload();
   }
