@@ -10,14 +10,23 @@ while ($row = $resultadoSql->fetch_assoc()) {
     <tr>
         <td>'.$x.'</td>
         <td><img src="docs/'.$row['ruta'].'" width="100" class="p-2"></td>
-        <td class="text-center"><span class="text-center" id="qrcode'.$row['id'].'"></span></td>
+        
         <td>
-            <input value="'.$row['ruta'].'" hidden id="photoRuta'.$row['id'].'">
-            <script>
-                ModalQr("'.$row['ruta'].'",'.$row['id'].');
-            </script>
-                    
+            <span>'.$row['descripcion'].'</span>
         </td>     
+        <td>
+        
+            <select class="form-select" aria-label="Default select example">
+                <option value="0" '.(($row['categoria'] == 0) ? 'selected' : '').'>Selecciona la categoría</option>
+                <option value="1" '.(($row['categoria'] == 1) ? 'selected' : '').'>Categoría 1</option>
+                <option value="2" '.(($row['categoria'] == 2) ? 'selected' : '').'>Categoría 2</option>
+                <option value="3" '.(($row['categoria'] == 3) ? 'selected' : '').'>Categoría 3</option>
+            </select>
+
+        </td>    
+        <td>
+            <button class="btn btn-danger"><i class="bi bi-trash3-fill"></i> Eliminar</button>
+        </td> 
     </tr>
     ';
 }

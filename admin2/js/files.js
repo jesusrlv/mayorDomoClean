@@ -4,9 +4,10 @@ function _(el) {
   
   function subirFoto(){
     var file = document.getElementById("file").value;
+    var descripcion = document.getElementById("descripcion").value;
     var selector = document.getElementById("selectorCategoria").value;
-    if (file == null || file == "" || selector == null || selector == ""){
-      alert("Por favor, selecciona una imagen y una categoría.");
+    if (file == null || file == "" || selector == null || selector == "" || descripcion == null || descripcion == ""){
+      alert("Por favor, selecciona una imagen, escribe la descripción y una categoría.");
       return;
     }
     else{
@@ -17,10 +18,12 @@ function _(el) {
   function uploadFile() {
     var file = _("file").files[0];
     var categoria = document.getElementById("selectorCategoria").value;
+    var descripcion = document.getElementById("descripcion").value;
     // alert(file.name+" | "+file.size+" | "+file.type);
     var formdata = new FormData();
     // variable del name file
     formdata.append("categoria", categoria);
+    formdata.append("descripcion", descripcion);
     formdata.append("file", file);
     // variables post
     var ajax = new XMLHttpRequest();

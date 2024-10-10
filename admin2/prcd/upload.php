@@ -5,6 +5,7 @@
     setlocale(LC_TIME, 'es_MX.UTF-8');
     
     $categoria = $_POST['categoria'];
+    $descripcion = $_POST['descripcion'];
 
 $fileName = $_FILES["file"]["name"]; // The file name
 $fileTmpLoc = $_FILES["file"]["tmp_name"]; // File in the PHP tmp folder
@@ -25,8 +26,8 @@ $namePhoto = uniqid('photoMayorDome_', true) . '.' . $extension;
     echo "$fileName carga completa";
     
     $ruta = $namePhoto;
-    $sqlInsert= "INSERT INTO photo(ruta,categoria) 
-    VALUES('$namePhoto','$categoria')";
+    $sqlInsert= "INSERT INTO photo(ruta,categoria,descripcion) 
+    VALUES('$namePhoto','$categoria','$descripcion')";
     $resultado= $conn->query($sqlInsert);
     
     

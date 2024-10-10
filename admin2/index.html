@@ -58,27 +58,36 @@
     
     <section class="mt-3">
       <div class="container">
-        <h3>¿Qué foto deseas agregar?</h3>
+        <h3 class="mb-4">¿Qué foto deseas agregar?</h3>
         <form id="upload_form" enctype="multipart/form-data" method="post">
 
           <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Descripción de la foto</span>
+            <input type="text" class="form-control" placeholder="Texto para Descripción" aria-label="Texto para Descripción" aria-describedby="basic-addon1" id="descripcion">
+          </div>          
+
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon2">Categoría de la foto</span>
             <select class="form-select" name="" id="selectorCategoria">
               <option value="">Seleccione categoría</option>
               <option value="1">Categoría 1</option>
               <option value="2">Categoría 2</option>
               <option value="3">Categoría 3</option>
             </select>
-            <span class="input-group-text" id="basic-addon2">Categoría de la foto</span>
           </div>
           
           <div class="input-group mb-3">
             <input type="file" id="file" class="form-control" placeholder="Imagen" aria-label="Imagen" aria-describedby="basic-addon1" accept="image/*">
             <span class="input-group-text" id="basic-addon1"><i class="bi bi-image-fill"></i></span>
-            <button type="button" class="btn btn-primary" onclick="subirFoto()"><i class="bi bi-plus-circle-dotted"></i> Agregar</button>
+            
           </div>
           <progress id="progressBar" value="0" max="100" style="width:300px;"></progress>
           <small id="status"></small>
           <p id="loaded_n_total"></p>
+
+          <div class="d-grid gap-2">
+            <button type="button" class="btn btn-primary" onclick="subirFoto()"><i class="bi bi-plus-circle-dotted"></i> Agregar</button>
+          </div>
         </form>
         
       </div>
@@ -87,13 +96,13 @@
       <div class="container">
         <hr>
         <h3><i class="bi bi-image-fill"></i> Imágenes agregadas</h3>
-        <table class="table">
+        <table class="table align-middle text-center">
           <thead>
             <tr>
               <th scope="col">#</th>
               <th scope="col">Archivo</th>
+              <th scope="col">Descripción</th>
               <th scope="col">Categoría</th>
-              <th scope="col">Link</th>
               <th scope="col">Acción</th>
             </tr>
           </thead>
