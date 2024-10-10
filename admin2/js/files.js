@@ -100,3 +100,32 @@ var qrcode = new QRCode(document.getElementById("qrcode"+num), {
     console.log();
 
   }
+
+  function eliminarPhoto(id){
+
+    var idPhoto = id;
+    if (confirm("¿Estás seguro de que deseas eliminar este elemento?")) {
+      $.ajax({
+        type: "POST",
+        data:{
+          idPhoto:idPhoto
+        },
+        url: "prcd/deletePhoto.php",
+        dataType: "json",
+        success: function(data){
+          var jsonData = JSON.parse(JSON.stringify(data));
+          var success = jsonData.success;
+          if (success == 1){
+            alert("Se eliminó la fotografía");
+            queryPhotos();
+          }
+          else{
+            alert("No se eliminó la fotografía");
+          }
+        }
+      });
+    }
+    else{
+      console.log("No se eliminó");
+    }
+  }

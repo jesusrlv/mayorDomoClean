@@ -15,7 +15,7 @@ while ($row = $resultadoSql->fetch_assoc()) {
             <span>'.$row['descripcion'].'</span>
         </td>     
         <td>
-        
+
             <select class="form-select" aria-label="Default select example">
                 <option value="0" '.(($row['categoria'] == 0) ? 'selected' : '').'>Selecciona la categoría</option>
                 <option value="1" '.(($row['categoria'] == 1) ? 'selected' : '').'>Categoría 1</option>
@@ -25,7 +25,7 @@ while ($row = $resultadoSql->fetch_assoc()) {
 
         </td>    
         <td>
-            <button class="btn btn-danger"><i class="bi bi-trash3-fill"></i> Eliminar</button>
+            <button class="btn btn-danger" onclick="eliminarPhoto('.$row['id'].')"><i class="bi bi-trash3-fill"></i> Eliminar</button>
         </td> 
     </tr>
     ';
