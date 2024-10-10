@@ -18,9 +18,12 @@ while ($row = $resultadoSql->fetch_assoc()) {
 
             <select class="form-select" aria-label="Default select example" onchange="cambiarCategoria('.$row['id'].',this.value)">
                 <option value="0" '.(($row['categoria'] == 0) ? 'selected' : '').'>Selecciona la categoría</option>
-                <option value="1" '.(($row['categoria'] == 1) ? 'selected' : '').'>Categoría 1</option>
-                <option value="2" '.(($row['categoria'] == 2) ? 'selected' : '').'>Categoría 2</option>
-                <option value="3" '.(($row['categoria'] == 3) ? 'selected' : '').'>Categoría 3</option>
+                <option value="1" '.(($row['categoria'] == 1) ? 'selected' : '').'>Doméstico</option>
+                <option value="2" '.(($row['categoria'] == 2) ? 'selected' : '').'>Automotriz</option>
+                <option value="3" '.(($row['categoria'] == 3) ? 'selected' : '').'>Mascotas</option>
+                <option value="4" '.(($row['categoria'] == 3) ? 'selected' : '').'>Higiénicos</option>
+                <option value="5" '.(($row['categoria'] == 3) ? 'selected' : '').'>Jarcería</option>
+                <option value="6" '.(($row['categoria'] == 3) ? 'selected' : '').'>Escobas y trapeadores</option>
             </select>
 
         </td>    

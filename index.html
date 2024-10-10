@@ -22,6 +22,8 @@
         <link rel="stylesheet" href="assets/css/style.css">
         <link rel="stylesheet" href="assets/css/responsive.css">
         <script src="assets/js/vendor/modernizr-3.11.7.min.js"></script>
+
+        <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     </head>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Michroma&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
@@ -141,18 +143,18 @@
                         <div class="furits-banner-wrapper mb-30 wow fadeInLeft" style="background-color:#005fea">
                             <img src="img/ico/ICONOS TRANSPARENTES-01.png" alt="" id="imgFilter">
                             <div class="furits-banner-content">
-                                <h4 style="">Limpieza</h4>
-                                <p style="">para el hogar.</p>
+                                <h4 style="">Doméstico</h4>
+                                <p style="">Para el hogar.</p>
                                 <a class="furits-banner-btn btn-hover" href="#" style="color:#172de2">Información</a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-4">
-                        <div class="furits-banner-wrapper mb-30 wow fadeInUp" style="background-color:#005fea">
+                        <div class="furits-banner-wrapper mb-30 wow fadeInUp" style="background-color:#005fea" onclick="modalFotos(1)">
                             <img src="img/ico/ICONOS TRANSPARENTES-02.png" alt="" id="imgFilter">
                             <div class="furits-banner-content">
-                                <h4 style="">Doméstico</h4>
-                                <p style="">para tu casa.</p>
+                                <h4 style="">Automotriz</h4>
+                                <p style="">Para tu vehículo.</p>
                                 <a style="color:#172de2" class="furits-banner-btn btn-hover" href="#">Información</a>
                             </div>
                         </div>
@@ -161,8 +163,8 @@
                         <div class="furits-banner-wrapper mb-30 wow fadeInRight"style="background-color:#005fea">
                             <img src="img/ico/ICONOS TRANSPARENTES-03.png" alt="" id="imgFilter">
                             <div class="furits-banner-content">
-                                <h4 style="">Limpieza</h4>
-                                <p style="">industrial.</p>
+                                <h4 style="">Mascotas</h4>
+                                <p style="">Para los lomitos y michis.</p>
                                 <a style="color:#172de2" class="furits-banner-btn btn-hover" href="#">Información</a>
                             </div>
                         </div>
@@ -175,8 +177,8 @@
                         <div class="furits-banner-wrapper mb-30 wow fadeInLeft" style="background-color:#005fea">
                             <img src="img/ico/ICONOS TRANSPARENTES-04.png" alt="" id="imgFilter">
                             <div class="furits-banner-content">
-                                <h4 style="">Limpieza</h4>
-                                <p style="">para el hogar.</p>
+                                <h4 style="">Higiénicos</h4>
+                                <p style="">Para toda ocasión.</p>
                                 <a class="furits-banner-btn btn-hover" href="#" style="color:#172de2">Información</a>
                             </div>
                         </div>
@@ -185,8 +187,8 @@
                         <div class="furits-banner-wrapper mb-30 wow fadeInUp" style="background-color:#005fea">
                             <img src="img/ico/ICONOS TRANSPARENTES-05.png" alt="" id="imgFilter">
                             <div class="furits-banner-content">
-                                <h4 style="">Limpieza</h4>
-                                <p style="">para tu empresa.</p>
+                                <h4 style="">Jarcería</h4>
+                                <p style="">De limpieza.</p>
                                 <a style="color:#172de2" class="furits-banner-btn btn-hover" href="#">Información</a>
                             </div>
                         </div>
@@ -195,8 +197,8 @@
                         <div class="furits-banner-wrapper mb-30 wow fadeInRight"style="background-color:#005fea">
                             <img src="img/ico/ICONOS TRANSPARENTES-06.png" alt="" id="imgFilter">
                             <div class="furits-banner-content">
-                                <h4 style="">Limpieza</h4>
-                                <p style="">industrial.</p>
+                                <h4 style="">Escobas y trapeadores</h4>
+                                <p style="">Limpieza para toda ocasión.</p>
                                 <a style="color:#172de2" class="furits-banner-btn btn-hover" href="#">Información</a>
                             </div>
                         </div>
@@ -427,4 +429,32 @@
         });
         </script>
     </body>
+
 </html>
+
+<!-- Modal para imágenes -->
+<div class="modal fade" id="modalPhotos" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script>
+    function modalFotos(id){
+    var idPhoto = id;
+    $("modalPhotos").modal("show");
+  }
+</script>
+
