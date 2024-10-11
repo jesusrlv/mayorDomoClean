@@ -150,7 +150,7 @@
                                 <h4 style="">Doméstico</h4>
                                 <p style="">Para el hogar.</p>
                                 <a class="furits-banner-btn btn-hover" href="#" style="color:#172de2">Información</a>
-                                <button class="btn btn-light" onclick="modalFotos(1)">x</button>
+                                <button class="btn btn-light" onclick="modalFotos(1)">Catálogo</button>
                             </div>
                         </div>
                     </div>
@@ -161,6 +161,7 @@
                                 <h4 style="">Automotriz</h4>
                                 <p style="">Para tu vehículo.</p>
                                 <a style="color:#172de2" class="furits-banner-btn btn-hover" href="#">Información</a>
+                                <button class="btn btn-light" onclick="modalFotos(2)">Catálogo</button>
                             </div>
                         </div>
                     </div>
@@ -171,6 +172,7 @@
                                 <h4 style="">Mascotas</h4>
                                 <p style="">Para los lomitos y michis.</p>
                                 <a style="color:#172de2" class="furits-banner-btn btn-hover" href="#">Información</a>
+                                <button class="btn btn-light" onclick="modalFotos(3)">Catálogo</button>
                             </div>
                         </div>
                     </div>
@@ -185,6 +187,7 @@
                                 <h4 style="">Higiénicos</h4>
                                 <p style="">Para toda ocasión.</p>
                                 <a class="furits-banner-btn btn-hover" href="#" style="color:#172de2">Información</a>
+                                <button class="btn btn-light" onclick="modalFotos(4)">Catálogo</button>
                             </div>
                         </div>
                     </div>
@@ -195,6 +198,7 @@
                                 <h4 style="">Jarcería</h4>
                                 <p style="">De limpieza.</p>
                                 <a style="color:#172de2" class="furits-banner-btn btn-hover" href="#">Información</a>
+                                <button class="btn btn-light" onclick="modalFotos(5)">Catálogo</button>
                             </div>
                         </div>
                     </div>
@@ -205,6 +209,7 @@
                                 <h4 style="">Escobas y trapeadores</h4>
                                 <p style="">Limpieza para toda ocasión.</p>
                                 <a style="color:#172de2" class="furits-banner-btn btn-hover" href="#">Información</a>
+                                <button class="btn btn-light" onclick="modalFotos(6)">Catálogo</button>
                             </div>
                         </div>
                     </div>
@@ -446,11 +451,12 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-            <div class="row">
-                <div class="col-lg-4 col-md-3 col-sm-6" id="photosC">
+            <div id="photosC"></div>
+            <!-- <div class="row"> -->
+                <!-- <div class="col-lg-3 col-md-3 col-sm-6" id="photosC"> -->
                    
-                </div>
-            </div>
+                <!-- </div>
+            </div> -->
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
@@ -462,6 +468,7 @@
 <script>
     function modalFotos(id){
     var idPhoto = id;
+    document.getElementById("photosC").innerHTML = "";
     $("#modalPhotos").modal("show");
     $.ajax({
         type: "POST",
