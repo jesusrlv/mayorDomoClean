@@ -24,7 +24,7 @@ else if($id == 6){
 }
 
 echo '
-<div class="row w-100 d-flex justify-content-center align-items-center">
+<div class="row w-100 d-flex justify-content-center align-items-center g-3">
 ';
 
 $sql = "SELECT * FROM photo WHERE categoria = '$id' ORDER BY id DESC";
@@ -32,7 +32,7 @@ $resultadoSql = $conn->query($sql);
 while ($row = $resultadoSql->fetch_assoc()) {
     
     echo '
-        <div class="col-lg-3 col-md-4 col-sm-12 mx-auto text-start g-1" id="photosC">
+        <div class="col-lg-3 col-md-4 col-sm-12 m-2 text-start" id="photosC">
             <div class="card text-bg-primary mb-3" style="" id="cardDesc">
               <img src="'.$photo.'" class="card-img-top" alt="...">
 
