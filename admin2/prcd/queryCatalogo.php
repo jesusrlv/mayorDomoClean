@@ -4,29 +4,29 @@ include('qc.php');
 $id = $_POST['idPhoto'];
 
 echo '
-<div class="row">
-<div class="col-xl-3 col-lg-3 col-md-2 col-sm-6 g-0" id="photosC">
+<div class="row w-100 d-flex justify-content-center align-items-center">
 ';
 
 $sql = "SELECT * FROM photo WHERE categoria = '$id' ORDER BY id DESC";
 $resultadoSql = $conn->query($sql);
 while ($row = $resultadoSql->fetch_assoc()) {
-
+    
     echo '
-            <div class="card text-bg-primary mb-3" style="width: auto; height: 450px;">
+        <div class="col-lg-3 col-md-4 col-sm-12 mx-auto text-start g-1" id="photosC">
+            <div class="card text-bg-primary mb-3" style="width: 250px; max-height: 800px; height: 750px;">
               <img src="admin2/docs/01.png" class="card-img-top" alt="...">
 
-                <div class="card-body">
+                <div class="card-body border-bottom border-light bg-light">
                     <h5 class="card-title">'.$row['producto'].'</h5>
-                    <p class="card-text">Descripción: '.$row['descripcion'].'.</p>
+                    <p class="card-text small">Descripción: '.$row['descripcion'].'.</p>
                     <p class="card-text">Precio: $'.$row['precio'].'.</p>
                 </div>
             </div>
+        </div>
     ';
 }
 
 echo '
-</div>
 </div>
 ';
 
