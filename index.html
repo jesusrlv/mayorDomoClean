@@ -65,6 +65,9 @@
                 width: 100%; 
                 
             }
+            #imagenBack{
+                visibility: hidden;
+            }
         }
         
 
@@ -137,7 +140,7 @@
                 </div> -->
 
                 <!-- bootstrap carousel -->
-                <div id="carouselExampleDark" class="carousel carousel-dark slide">
+                <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
                     <div class="carousel-indicators">
                       <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                       <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -145,31 +148,32 @@
                     </div>
                     
                     <div class="carousel-inner">
-                      <div class="carousel-item active" data-bs-interval="10000">
+                      <div class="carousel-item active" data-bs-interval="5000">
                         <img src="img/images/Hero.jpeg" class="d-block w-100" alt="...">
                         <div class="carousel-caption d-flex flex-column justify-content-center align-items-center h-100">
                           <!-- El contenido centrado verticalmente -->
                           
-                          <img class="animated" src="img/images/Mayor_clean_blanco_2.png" alt=""style="width:50%;padding-bottom:10px;">
+                          <img class="animated" src="img/images/Mayor_clean_blanco_2.png" alt=""style="width:50%;padding-bottom:10px;" id="imagenBack">
                             <p class="animated" style="background-color:rgba(255,255,255,0.8); border-radius:8px;visibility: hidden;">.</p>
-                            <a class="furits-slider-btn btn-hover animated" href="#info">Información</a>
+                            <a class="furits-slider-btn btn-hover animated" href="#info" id="imagenBack">Información</a>
                         </div>
                       </div>
                   
-                      <div class="carousel-item" data-bs-interval="2000">
+                      <div class="carousel-item" data-bs-interval="5000">
                         <img src="img/images/emprende_negocio.png" class="d-block w-100" alt="...">
                         <div class="carousel-caption d-flex flex-column justify-content-center align-items-center h-100">
-                          <h5>Second slide label</h5>
-                          <p>Some representative placeholder content for the second slide.</p>
+                            <img class="animated" src="img/images/Mayor_clean_blanco_2.png" alt=""style="width:50%;padding-bottom:10px;" id="imagenBack">
+                            <p class="animated" style="background-color:rgba(255,255,255,0.8); border-radius:8px;visibility: hidden;">.</p>
+                            <a class="furits-slider-btn btn-hover animated" href="#info" id="imagenBack">Información</a>
                         </div>
                       </div>
                   
-                      <div class="carousel-item">
+                      <div class="carousel-item" data-bs-interval="5000">
                         <img src="img/images/Hero.jpeg" class="d-block w-100" alt="...">
                         <div class="carousel-caption d-flex flex-column justify-content-center align-items-center h-100">
-                            <img class="animated" src="img/images/Mayor_clean_blanco_2.png" alt=""style="width:50%;padding-bottom:10px;">
+                            <img class="animated" src="img/images/Mayor_clean_blanco_2.png" alt=""style="width:50%;padding-bottom:10px;" id="imagenBack">
                             <p class="animated" style="background-color:rgba(255,255,255,0.8); border-radius:8px;visibility: hidden;">.</p>
-                            <a class="furits-slider-btn btn-hover animated" href="#info">Información</a>
+                            <a class="furits-slider-btn btn-hover animated" href="#info" id="imagenBack">Información</a>
                         </div>
                       </div>
                     </div>
@@ -452,11 +456,11 @@
                                                     </p>
                                                 </div>
                                             </div>
-                                            <div class="food-address">
+                                            <div class="food-address" hidden>
                                                 <div class="food-info-icon">
                                                     <i class="pe-7s-chat"></i>
                                                 </div>
-                                                <div class="food-info-content">
+                                                <div class="food-info-content" hidden>
                                                     <p><a href="mailto:alexeduardomuro@hotmail.com" hidden>alexeduardomuro@hotmail.com</a></p>
                                                 </div>
                                             </div>
