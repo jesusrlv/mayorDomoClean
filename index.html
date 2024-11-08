@@ -59,11 +59,27 @@
             max-height: 800px; 
             height: 750px;
             }
+        #carruselResponsivo{
+            
+            height: 900px;
+        }
+        #imgResp{
+                height: 900px;
+            }
 
         @media (max-width: 575px) {
             #cardDesc{
                 width: 100%; 
                 
+            }
+            #imagenBack{
+                visibility: hidden;
+            }
+            #carruselResponsivo{
+                height: 25%;
+            }
+            #imgResp{
+                height: 300px;
             }
         }
         
@@ -123,20 +139,72 @@
         </header>
         <!-- header end -->
         <div class="slider-area">
-            <div class="slider-active-2 owl-carousel">
-                <div class="single-slider-4 bg-img furits-slider" style="background-image: url(img/images/Hero.jpeg);">
+            <!-- <div class="slider-active-2 owl-carousel"> -->
+
+                <!-- <div class="single-slider-4 bg-img furits-slider" style="background-image: url(img/images/Hero.jpeg);">
                     <div class="container">
                         <div class="fadeinup-animated furits-content text-center">
                             <img class="animated" src="img/images/Mayor_clean_blanco_2.png" alt=""style="width:50%;padding-bottom:10px;">
                             <p class="animated" style="background-color:rgba(255,255,255,0.8); border-radius:8px;visibility: hidden;">.</p>
                             <a class="furits-slider-btn btn-hover animated" href="#info">Información</a>
                             <p class="animated" style="background-color:rgba(255,255,255,0.8); border-radius:8px;visibility: hidden;">.</p>
-                            <!--<img class="animated slide-img-position" src="img/limpieza_01.jpg" alt="">-->
                         </div>
                     </div>
-                </div>
+                </div> -->
+
+                <!-- bootstrap carousel -->
+                <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    
+                    <div class="carousel-inner"  id="carruselResponsivo">
+                      <div class="carousel-item active" data-bs-interval="5000">
+                        <img src="img/images/Hero.jpeg" class="d-block w-100 img-fluid" style=" object-fit: cover;"  alt="..." id="imgResp">
+                        <div class="carousel-caption d-flex flex-column justify-content-center align-items-center h-100">
+                          <!-- El contenido centrado verticalmente -->
+                          
+                          <img class="animated" src="img/images/Mayor_clean_blanco_2.png" alt="" style="width:50%;padding-bottom:10px;" id="imagenBack">
+                            <p class="animated" style="background-color:rgba(255,255,255,0.8); border-radius:8px;visibility: hidden;">.</p>
+                            <a class="furits-slider-btn btn-hover animated" href="#info" id="imagenBack">Información</a>
+                        </div>
+                      </div>
+                  
+                      <div class="carousel-item" data-bs-interval="5000">
+                        <img src="img/images/detergente_02.jpg" class="d-block w-100 img-fluid" style=" object-fit: cover;"  alt="..." id="imgResp">
+                        <div class="carousel-caption d-flex flex-column justify-content-center align-items-center h-100">
+                            <img class="animated" src="img/images/Mayor_clean_blanco_2.png" alt=""style="width:50%;padding-bottom:10px;" id="imagenBack">
+                            <p class="animated" style="background-color:rgba(255,255,255,0.8); border-radius:8px;visibility: hidden;">.</p>
+                            <a class="furits-slider-btn btn-hover animated" href="#info" id="imagenBack">Información</a>
+                        </div>
+                      </div>
+                  
+                      <div class="carousel-item" data-bs-interval="5000">
+                        <img src="img/images/detergente_03.jpg" class="d-block w-100 img-fluid" style=" object-fit: cover;"  alt="..." id="imgResp">
+                        <div class="carousel-caption d-flex flex-column justify-content-center align-items-center h-100">
+                            <img class="animated" src="img/images/Mayor_clean_blanco_2.png" alt=""style="width:50%;padding-bottom:10px;" id="imagenBack">
+                            <p class="animated" style="background-color:rgba(255,255,255,0.8); border-radius:8px;visibility: hidden;">.</p>
+                            <a class="furits-slider-btn btn-hover animated" href="#info" id="imagenBack">Información</a>
+                        </div>
+                      </div>
+                    </div>
+                  
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+                  
+                <!-- bootstrap carousel -->
                 
-            </div>
+            <!-- </div> -->
             <div class="slider-social">
                 <span>Follow us on:  </span>
                 <ul>
@@ -149,6 +217,8 @@
         <!-- banner area start -->
         <div class="banner-area pt-90 pb-160 fix" id="info">
             <div class="container">
+                <h2 class="text-center mb-4 ">Catálogo</h2>
+                
                 <div class="row">
                     
                     <div class="col-lg-4 col-md-4">
@@ -243,7 +313,7 @@
             <div class="container-fluid">
                 <div class="section-title-furits bg-shape text-center mb-80">
                     <img src="img/sloganazul.png" alt="" width="180">
-                    <h2>Productos</h2>
+                    <h2>Productos más vendidos</h2>
                 </div>
                 <div class="product-fruit-slider owl-carousel">
                     <div class="product-fruit-wrapper">
@@ -407,16 +477,16 @@
                                                     <i class="pe-7s-call"></i>
                                                 </div>
                                                 <div class="food-info-content">
-                                                    <p>+524491429722
+                                                    <p>+524497546670
                                                     </p>
                                                 </div>
                                             </div>
-                                            <div class="food-address">
+                                            <div class="food-address" hidden>
                                                 <div class="food-info-icon">
                                                     <i class="pe-7s-chat"></i>
                                                 </div>
-                                                <div class="food-info-content">
-                                                    <p><a href="mailto:alexeduardomuro@hotmail.com">alexeduardomuro@hotmail.com</a></p>
+                                                <div class="food-info-content" hidden>
+                                                    <p><a href="mailto:alexeduardomuro@hotmail.com" hidden>alexeduardomuro@hotmail.com</a></p>
                                                 </div>
                                             </div>
                                         </div>
