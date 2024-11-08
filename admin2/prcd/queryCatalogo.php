@@ -22,6 +22,9 @@ else if($id == 5){
 else if($id == 6){
     $photo = "admin2/docs/06.png";
 }
+else if($id == 7){
+    $photo = "admin2/docs/01.png";
+}
 
 echo '
 <div class="row w-100 d-flex justify-content-center align-items-center g-3">
