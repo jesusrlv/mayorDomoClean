@@ -23,7 +23,37 @@ else if($id == 6){
     $photo = "admin2/docs/06.png";
 }
 else if($id == 7){
-    $photo = "admin2/docs/01.png";
+    $photo = "admin2/docs/07.png";
+}
+else if($id == 8){
+    $photo = "admin2/docs/08.png";
+}
+else if($id == 9){
+    $photo = "admin2/docs/09.png";
+}
+else if($id == 10){
+    $photo = "admin2/docs/10.png";
+}
+else if($id == 11){
+    $photo = "admin2/docs/11.png";
+}
+else if($id == 12){
+    $photo = "admin2/docs/12.png";
+}
+else if($id == 13){
+    $photo = "admin2/docs/13.png";
+}
+else if($id == 14){
+    $photo = "admin2/docs/14.png";
+}
+else if($id == 15){
+    $photo = "admin2/docs/15.png";
+}
+else if($id == 16){
+    $photo = "admin2/docs/16.png";
+}
+else if($id == 17){
+    $photo = "admin2/docs/17.png";
 }
 
 echo '
@@ -37,7 +67,7 @@ while ($row = $resultadoSql->fetch_assoc()) {
     echo '
         <div class="col-lg-3 col-md-4 col-sm-12 m-2 text-start" id="photosC">
             <div class="card text-bg-primary mb-3" style="" id="cardDesc">
-              <img src="'.$photo.'" class="card-img-top" alt="...">
+              <img src="'.$photo.'" class="card-img-top w-75" alt="...">
 
                 <div class="card-body border-bottom border-light bg-light">
                     <h5 class="card-title">'.$row['producto'].'</h5>
