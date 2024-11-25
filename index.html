@@ -83,6 +83,20 @@
             }
         }
         
+        #cardDesc {
+            position: relative; /* Necesario para posicionar el logo relativo al contenedor */
+        }
+
+        .logo-img2 {
+            position: absolute;
+            bottom: 10px; /* Distancia desde la parte inferior */
+            right: 10px; /* Distancia desde la parte derecha */
+            width: 80px; /* Tamaño del logo (ajustar según necesidad) */
+            height: 80px; /* Tamaño del logo */
+            border-radius: 50%; /* Hacerlo circular si es necesario */
+            border: 2px solid white; /* Opcional: borde para el logo */
+            background-color: #0d6efd;
+        }
 
     </style>
     <body>
@@ -657,7 +671,7 @@
 </html>
 
 <!-- Modal para imágenes -->
-<div class="modal fade" id="modalPhotos" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="modalPhotos" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="z-index: 10000000;">
     <div class="modal-dialog modal-xl">
       <div class="modal-content">
         <div class="modal-header">

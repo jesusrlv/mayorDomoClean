@@ -63,17 +63,21 @@ echo '
 $sql = "SELECT * FROM photo WHERE categoria = '$id' ORDER BY id DESC";
 $resultadoSql = $conn->query($sql);
 while ($row = $resultadoSql->fetch_assoc()) {
-    
+    $photo2 = $row['ruta'];
     echo '
         <div class="col-lg-3 col-md-4 col-sm-12 m-2 text-start" id="photosC">
-            <div class="card text-bg-primary mb-3" style="" id="cardDesc">
-              <img src="'.$photo.'" class="card-img-top w-100" alt="...">
+            <div class="card text-bg-primary mb-3 position-relative" id="cardDesc">
+              <!-- Imagen principal -->
+              <img src="img/productos/'.$photo2.'" class="card-img-top w-100" alt="Imagen principal">
+              
+              <!-- Logo en la esquina inferior derecha -->
+              <img src="'.$photo.'" class="logo-img2" alt="Logo">
 
-                <div class="card-body border-bottom border-light bg-light">
-                    <h5 class="card-title">'.$row['producto'].'</h5>
-                    <p class="card-text" style="font-size:10px"><strong>DESCRIPCIÓN:</strong> '.$row['descripcion'].'.</p>
-                    <p class="card-text">Precio: '.$row['precio'].'.</p>
-                </div>
+              <div class="card-body border-bottom border-light bg-light">
+                  <h5 class="card-title">'.$row['producto'].'</h5>
+                  <p class="card-text" style="font-size:10px"><strong>DESCRIPCIÓN:</strong> '.$row['descripcion'].'.</p>
+                  <p class="card-text">Precio: '.$row['precio'].'.</p>
+              </div>
             </div>
         </div>
     ';
