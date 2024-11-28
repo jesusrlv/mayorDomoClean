@@ -74,9 +74,9 @@ while ($row = $resultadoSql->fetch_assoc()) {
               <img src="'.$photo.'" class="logo-img2" alt="Logo">
 
               <div class="card-body border-bottom border-light bg-light">
-                  <h5 class="card-title">'.$row['producto'].'</h5>
-                  <p class="card-text" style="font-size:10px"><strong>DESCRIPCIÓN:</strong> '.$row['descripcion'].'.</p>
-                  <p class="card-text">Precio: '.$row['precio'].'.</p>
+                  <h5 class="card-title bg-primary rounded p-1 text-light text-center">'.$row['producto'].'</h5>
+                  <p class="card-text" style="font-size:10px"><strong>DESCRIPCIÓN:</strong> '.$row['descripcion'].'</p>
+                  <p class="card-text"><span class="badge rounded-pill text-bg-primary">Precio: '.$row['precio'].'.</span></p>
               </div>
             </div>
         </div>
